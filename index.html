@@ -8,52 +8,56 @@
         <link href="https://fonts.googleapis.com/css?family=Francois+One|Permanent+Marker&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
         <link rel="stylesheet" href="assets/style/style.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-</head>
-  <body>
-
-    <section class="hero is-dark is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Mother Nature's Weather Dashboard
-          </h1>
-          <h2 class="subtitle">
-            the one stop to find out what mother nature is up to
-          </h2>
-        </div>
-      </div>
-    </section>
-
-<div class="container">
-  <div class="columns"> 
-      <div class="column is-one-third">
-        <div class="card-content">
-          <input class="input is-info is-medium is-rounded" placeholder="City" />
-          <a class="button is-info">
-            <strong>Submit</strong>
-          </a>
-        </div>
-        <div id="savedCities">
-
-        </div>
-      </div>
-      <div class="column">
-        <div class="card-content">
-          <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+      </head>
+      <body>
+        
+        <section class="hero is-dark is-bold">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Mother Nature's Weather Dashboard
+              </h1>
+              <h2 class="subtitle">
+                the one stop to find out what mother nature is up to
+              </h2>
+            </div>
+          </div>
+        </section>
+        <form>
+          <div class="container">
+            <div class="columns"> 
+              <div class="column is-one-third">
+                <div class="card-content">
+                  <input id="location" class="input is-info is-medium is-rounded" placeholder="City" />
+                  <a class="button is-info" id="submitBtn">
+                    <strong>Submit</strong>
+                  </a>
+                </div>
+              </form>
+              <div id="savedCities">
+                
+              </div>
+            </div>
+            <div class="column">
+              <div class="card-content">
+                <div id="current" class="content">
+                  Your current weather will appear here!
+                </div>
+              </div>
+              <footer class="card-footer">
+                <div class="card-footer-item">day 1</div>
+                <div class="card-footer-item">day 2</div>
+                <div class="card-footer-item">day 3</div>
+                <div class="card-footer-item">day 4</div>
+                <div class="card-footer-item">day 5</div>
+              </footer>
+            </div>
           </div>
         </div>
-        <footer class="card-footer">
-          <div class="card-footer-item">day 1</div>
-          <div class="card-footer-item">day 2</div>
-          <div class="card-footer-item">day 3</div>
-          <div class="card-footer-item">day 4</div>
-          <div class="card-footer-item">day 5</div>
-        </footer>
-      </div>
-  </div>
-</div>
-
-  </body>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="assets/js/script.js"></script>
+        
+      </body>
 </html>
