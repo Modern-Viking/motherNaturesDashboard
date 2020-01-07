@@ -1,7 +1,7 @@
 var weather = weather;
 
 function currentWeather(){
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+ $("#location").val().trim() +"&mode=JSON&units=imperial&APPID=af82351b67e679162e4cee80aed688f7";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ $("#location").val().trim() +"&mode=JSON&units=imperial&APPID=af82351b67e679162e4cee80aed688f7";
     console.log(queryURL);
     $.ajax({
         url:queryURL,
