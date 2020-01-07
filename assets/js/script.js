@@ -1,8 +1,4 @@
-$("#submitBtn").on("click", function(event){
-    event.preventDefault();
-currentWeather();
-
-});
+var weather = weather;
 
 function currentWeather(){
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+ $("#location").val().trim() +"&mode=JSON&units=imperial&APPID=af82351b67e679162e4cee80aed688f7";
@@ -12,28 +8,32 @@ function currentWeather(){
         method: "GET"
     }).then(function(response) {
         //set API data to an object
-        var weather = {
-            name: response.name,
+        weather = {
+            Name: response.name,
             currentTemp: response.main.temp,
-            description: response.weather[0].description,
-            high: response.main.temp_max,
-            low: response.main.temp_min,
-            precip: response.main.humidity,
+            Description: response.weather[0].description,
+            High: response.main.temp_max,
+            Low: response.main.temp_min,
+            Precipitation: response.main.humidity,
         }
-        new currentWeatherDisplay(weather);
+        console.log(weather);
+        currentWeatherDisplay();
     })};
     
-function currentWeatherDisplay(obj){
-    //Removes any existing #current
-    $("#current").remove();
-    //Creates div#current
-    var main = $("#current");
-    //Cycles through obj passed in as function
-    for (const key in obj) {
-        //Creates new <p> with obj key and value
-        var k= $(`<p>${[key]} ${obj[key]}</p>`);
-        main.append(k)
-    }
-    $("#current").append(main);
+    $("#submitBtn").on("click", function(event){
+        event.preventDefault();
+        currentWeather();
+        
+    });
+function currentWeatherDisplay(){
+    $("#current").empty();
+    $.each (weather, function(key,value) {
+        var para = $("<p class='info'></p>");
+        $("#current").append(para);
+        $("#current").append(para.text = (key+" : "+value));
+        console.log(key);
+        console.log(value);
+        console.log(para);
+    });
 
 };
