@@ -7,7 +7,7 @@ This application is a weather dashboard.
 
 ## Contents
 
-![screenshot](https://github.com/Modern-Viking/motherNaturesDashboard/blob/master/assets/images/screenshot for md.png?raw=true)
+![screenshot](https://github.com/Modern-Viking/motherNaturesDashboard/blob/master/assets/images/screenshot%20for%20md.jpg?raw=true)
 
 ## Instructions
 Insert your location of choice and the weather for that location will populate on the right of the input box.
